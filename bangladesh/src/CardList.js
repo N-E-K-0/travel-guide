@@ -1,5 +1,4 @@
 import React from 'react';
-//import place from './Places';
 import Card from './Card';
 
 const CardList= ({place}) => {
@@ -9,12 +8,15 @@ const CardList= ({place}) => {
 			{
 				place.map((user, i) => {
 					return (
-						<Card 
-							key={i} 
-							id={place[i].id} 
-							name={place[i].name}
-							src={place[i].src}  
-						/>
+						<>
+							<Card
+								key={i} 
+								id={place[i].id} 
+								name={place[i].name}
+								src={place[i].src}
+								details={place[i].details}  
+							/>
+						</>
 					); 
 				})
 			}
